@@ -10,18 +10,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+    - name: Checkout repo
       uses: actions/checkout@v2
-      - name: Use Node.js 14
-      uses: actions/setup-node@v2
+    - name: Use Node.js 14
+      uses: actions/setup-node@v1
       with:
         node-version: 14
-        cache: 'npm'
-      - name: Install dependecies
+    - name: Install dependecies
       run: npm install
-      - name: Build
+    - name: Build
       run: npm run build
-      - name: Deploy
+    - name: Deploy
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
