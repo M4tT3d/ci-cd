@@ -1,4 +1,4 @@
-name: Workflow test reo
+name: Workflow test repo
 
 on:
   push:
